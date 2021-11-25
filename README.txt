@@ -13,7 +13,7 @@ Roles
 <Role Admin>
 - Admin page must be password protected
 - Handles login/logout
-- Password muste MD5 encrypted in the database
+- Password muste be MD5 encrypted in the database
 
 [Tasks]
 
