@@ -10,30 +10,37 @@ Database: Mysql
 Roles
 -----
 
-Role Admin
-- Database table: admin
+<Role Admin>
 
 [Tasks]
 
 Administrate registrations:
 - Database table: events_reg
-- Confirm a registration for a user.
-- When confirmed the user will receive an email.
-- Delete a user registration.
+- List all the registrations in a table after login
+- Confirm a registration for a user
+- When confirmed the user will receive an email
+- Delete a user registration
+- Related file: admin.php
 		
-
 Administrate an event:
 - Database table: events
+- List all the events in a table after login
 - Add an event
 - Edit an event
 - Delete an event
 - Close an event for registration
 - Open an event for registration
+- Related file: admin_events.php
 
-Role Users
 
-- Register to an event. Administrator will get a notification via email.
+<Role Users>
+
+[Tasks]
+
+- Register to an event via portal. The administrator will get a notification via email.
 - For information about a user see database table events_reg
+- Related file: registration.php
+- Open for the public
 
 Database tables
 ---------------
@@ -43,18 +50,18 @@ events: Contains information about events
 
 Files
 -----
-File name
-Description
-admin_events.php
-Handles admin tasks. 
-Password protected.
-register.php
-Handles registrations.
-Open for the public
-ajax.php
-Handles ajax calls from admin.php and register.php
-include/DBhandler.php
-Handles database queries.
-index.php
-Redirect to register.php
+<PHP-files>
+admin.php: Users administration.
+admin_events.php: Event adminisration.
+registrations.php: Portal for registration
+ajax.php: Handle Ajax calls
+index.php: Home page rediction
+login.php: Handles admin login
+logout.php: Handles admin logout
+menu.php: Top meny in admin page
+
+<SQL-files>
+admin.sql: SQL dump for admin table
+events_reg.sql: SQL dump for users who registered to the events
+events.sql: SQL dump for events table
 
